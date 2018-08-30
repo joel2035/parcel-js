@@ -1,0 +1,43 @@
+.features{
+  padding: 40px 0;
+
+
+
+  &-item {
+  padding-bottom: 40px;
+  &:last-child{
+    padding-bottom:0;
+  }
+  @include for-size(tablet-portrait-up) {
+    padding-bottom: 0;
+  }
+}
+
+  &-title{
+    margin-left: 20px;
+    font-size: 16px;
+
+      text-align: center;
+    @include for-size(tablet-portrait-up) {
+      font-size: 20px;
+
+    }
+  }
+
+  &-text{
+    margin-left: 70px;
+    color: #333333;
+    font-size: 14px;
+
+    line-height: 2;
+    @include for-size(tablet-portrait-up) {
+      font-size: 16px;
+    }
+  }
+
+  &-header{
+    padding-bottom: 16px;
+    display: flex;
+    align-items: center;
+  }
+}

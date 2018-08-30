@@ -1,0 +1,1 @@
+{"dependencies":[{"name":"/Users/david/dev/parcel/package.json","includedInParent":true,"mtime":1519727270345},{"name":"./styles/styles.scss","loc":{"line":1,"column":7}}],"generated":{"js":"\"use strict\";require(\"./styles/styles.scss\"),document.write(\"JS is Running !!!\");"},"hash":"5cd98064006f7dc5a9ace62c8e84b19d","cacheData":{"env":{}}}

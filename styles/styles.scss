@@ -1,0 +1,31 @@
+@import './global/reset'; /* ./global/_reset.scss */
+@import './global/variables'; /* ./global/_variables.scss */
+
+// Import Mixins
+@import './mixins/responsive';
+
+// Import Components
+@import './components/header';
+@import './components/features';
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  width: 100%;
+}
+
+body {
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+}
+
+.row {
+  margin: 0;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+}

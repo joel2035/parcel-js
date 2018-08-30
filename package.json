@@ -1,0 +1,24 @@
+{
+  "name": "parcel",
+  "version": "1.0.0",
+  "description": "starter",
+  "main": "index.js",
+  "author": "david",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.js"
+  },
+  "dependencies": {
+    "angularjs": "0.0.1",
+    "autoprefixer": "^8.0.0",
+    "flexboxgrid": "^6.3.1",
+    "jquery": "^3.3.1",
+    "jquery-dom": "0.0.1",
+    "node-sass": "^4.7.2"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.9.7"
+  }
+}
