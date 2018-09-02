@@ -1,9 +1,7 @@
 import './styles/styles.scss';
 import 'flexboxgrid';
+import './js/text.js';
 
-
-import jquery from 'jquery'
-window.$ = window.jQuery = jquery
 $(".features_home").animate({
   top: "0%",
   height: "100%",

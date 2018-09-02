@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "starter",
   "main": "index.js",
-  "author": "david",
+  "author": "joel",
   "license": "MIT",
   "private": false,
   "scripts": {
