@@ -5,7 +5,7 @@ import './js/text.js';
 $(".features_home").animate({
   top: "0%",
   height: "100%",
-}, 500, function() {
+}, 1000, function() {
   $(".features_home").animate({
     left: "0px",
     width: "50%",
@@ -31,4 +31,4 @@ $(".features_home").animate({
 
   })
 
-})
+});
