@@ -3,7 +3,7 @@ window.$ = window.jQuery = jquery;
 $(".features_home").animate({
   top: "0%",
   height: "100%",
-}, 500, function() {
+}, 900, function() {
   $(".features_home").animate({
     left: "0px",
     width: "50%",
@@ -21,12 +21,18 @@ $(".features_home").animate({
           function() {
             $(".features_img").animate({
               width: "30%",
-            }, 500)
+            }, 500, function() {
+              $(".features_it").fadeIn(900)
+
+            })
           })
       })
 
     })
 
   })
-
+  $(".features_items").click(function() {
+    $(".features_home").hide(1000),
+      $(".features_img").hide(1000)
+  })
 })
