@@ -1,7 +1,8 @@
 .features{
   width: 100%;
-  height: 100%;
+  height: 100vh;
   position: relative;
+
   &_home{
     background-color:red;
     height: 1%;
@@ -30,5 +31,23 @@
     height: 1px;
     background-color: #1D1D1D;
   }
+  &_items{
+ display: inline-block;
+ color: #FFF;
+ text-decoration: none;
+ margin: 10px;
+ &_link{
+   text-decoration: none;
+   color: #000;
 
+ }
+
+
+  }
+
+}
+ul{
+  float: right;
+  display: inline-block;
+  text-decoration: none;
 }

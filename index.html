@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 <html>
 
 <head>
@@ -7,25 +9,32 @@
   <title>Starter</title>
 </head>
 
-<body>
+<body ng-app="Webmail" ng-controller="WebmailCtrl">
+
   <section class="features">
-    <div class="features_home">
-    </div>
-    <div class="features_text">
-      <h1 class="features_text_hello">
-    Hello
+    <header>
+      <ul>
+        <li class="features_items" ng-repeat="dossier in dossiers" class=""><a ng-click = "selectionDossier(dossier)" class="features_items_link" href="">{{dossier.label}}</a></li>
+      </ul>
+    </header>
+
+    <div>
+      <div ng-repeat="video in dossierCourant.videos" class="filme">{{video}}</div>
+      </div>
+      <div class="features_home">
+      </div>
+      <div class="features_text">
+        <h1 class="features_text_hello">
+  Hello
   </h1>
-      <h1 class="features_text_world">
-World !
-</h1>
-    </div>
-    <div class="features_img">
+        <h1 class="features_text_world">
+  World !
+  </h1>
+      </div>
+      <div class="features_img">
 
-    </div>
-
-
+      </div>
   </section>
-
 
   <script type="text/javascript" src="./index.js"></script>
 </body>
