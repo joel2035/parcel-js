@@ -16,20 +16,51 @@ app.controller("WebmailCtrl", function($scope) {
 
       value: "Compétence",
       label: "Conpétence",
-      videos: ["suits", "snowfall", "Arrow", "Bad gril"]
+      videos: ["suits", "inspectuer"]
 
     },
     {
+      value: "contact",
+      label: "contact",
+      videos: {
+        input: [{
+            name: "firstName",
+            label: "firstName",
+            placeholder: "firstName",
+            type: "text"
+          },
+          {
+            name: "lastName",
+            label: "lastName",
+            placeholder: "lastName",
+            type: "text"
+          },
+          {
+            name: "email",
+            label: "email",
+            placeholder: "email",
+            type: "email"
+          },
+          {
+            name: "textarea",
+            label: "message",
+            placeholder: "textarea",
+            type: "textarea"
+          }
+        ]
+      }
 
-      value: "Contact",
-      label: "Contact",
-      videos: ["Overlord", "HunterxHunter", "God of martial art", "Soul land"]
 
     }
 
+
   ]
   $scope.dossierCourant = null;
+  $scope.videoSelectionne = null;
   $scope.selectionDossier = function(dossier) {
     $scope.dossierCourant = dossier;
+  }
+  $scope.selectionVideo = function(video) {
+    $scope.videoSelectionne = video;
   }
 })

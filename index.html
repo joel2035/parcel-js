@@ -19,7 +19,25 @@
     </header>
 
     <div>
-      <div ng-repeat="video in dossierCourant.videos" class="filme">{{video}}</div>
+      <div ng-repeat="video in dossierCourant.videos " class="filme" ng-click="selectionVideo(video)">{{video}}
+      </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+
+              <form class="form" action="index.html" method="post">
+                <div ng-bind-html="video." ng-repeat="video in dossierCourant.videos.input" class="col-md-6">
+                  <label for="">{{video.label}}</label>
+                  <input class="input" type={{video.type}} name={{video.name}} value="" placeholder={{video.placeholder}}>
+                  </div>
+                  <div class="submit" class="col-ms-12">
+                    <input type="submit" name="submit" value="envoyer">
+                  </div>
+
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="features_home">
       </div>
