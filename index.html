@@ -14,46 +14,108 @@
   <section class="features">
     <header>
       <ul class="features_it">
-        <li class="features_items" ng-repeat="dossier in dossiers" class=""><a ng-click = "selectionDossier(dossier)" class="features_items_link" href="">{{dossier.label}}</a></li>
+        <li ng-repeat="dossier in dossiers" ng-class="{active:dossier ==dossierCourant}" class="features_items"><a   ng-click="selectionDossier(dossier)" href="#" class="features_items_link" >{{dossier.label}}</a></li>
       </ul>
     </header>
 
     <div>
-      <div ng-repeat="video in dossierCourant.videos " class="filme" ng-click="selectionVideo(video)">{{video}}
-      </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
 
-              <form class="form" action="index.html" method="post">
-                <div ng-bind-html="video." ng-repeat="video in dossierCourant.videos.input" class="col-md-6">
-                  <label for="">{{video.label}}</label>
-                  <input class="input" type={{video.type}} name={{video.name}} value="" placeholder={{video.placeholder}}>
-                  </div>
-                  <div class="submit" class="col-ms-12">
-                    <input type="submit" name="submit" value="envoyer">
-                  </div>
+    </div>
+    <div class="features_home">
+    </div>
+    <div class="features_text">
+      <h1 class="features_text_hello">
+  Hello
+  </h1>
+      <h1 class="features_text_world">
+  World !
+  </h1>
+    </div>
+    <div class="features_img">
 
-              </form>
-            </div>
+    </div>
+  </section>
+  <section class="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-xs-12">
+
+          <div ng-repeat="value in dossierCourant.contentAbout" class="about_content">
+            <h1 class="about_title" >{{value.title}}</h1>
+            <p class="about_text">{{value.description}}</p>
           </div>
         </div>
       </div>
-      <div class="features_home">
-      </div>
-      <div class="features_text">
-        <h1 class="features_text_hello">
-  Hello
-  </h1>
-        <h1 class="features_text_world">
-  World !
-  </h1>
-      </div>
-      <div class="features_img">
+    </div>
+  </section>
+  <section class="projet">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 ng-repeat="dossier in dossiers" ng-show ="dossierCourant.contentProjet !=null" class="projet_title">{{dossier.title1}}</h1>
+        </div>
+        <div ng-repeat="value in dossierCourant.contentProjet" class="col-md-12">
 
+          <div class="col-md-12">
+            <div class="projet_img col-md-8">
+              <img class="projet_img_description" ng-src ="{{value.urlImage}}" alt="image">
+           </div>
+              <div class="projet_text col-md-4">
+                <h1 class="projet_text_title">{{value.name}}</h1>
+                <p class="projet_text_title_content">{{value.description}}</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
       </div>
   </section>
 
+  <section class="skill">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 ng-repeat = "dossier in dossiers" ng-show ="dossierCourant.contentSkill != null"
+           class="skill_title">{{dossier.title2}}</h2>
+        </div>
+        <div class="col-md-12">
+          <div ng-repeat="value in dossierCourant.contentSkill" class="skill_content">
+
+            <h2 class="skill_title_text">{{value.nam}}</h2>
+            <p class="skill_title_text">{{value.p1}}</p>
+            <p class="skill_title_text">{{value.p2}}</p>
+            <p class="skill_title_text">{{value.p3}}</p>
+            <p class="skill_title_text">{{value.p4}}</p>
+            <p class="skill_title_text">{{value.p5}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 ng-repeat = "dossier in dossiers" ng-show ="dossierCourant.contentContact != null"
+           class="contact_title">{{dossier.title3}}</h2>
+        </div>
+        <div class="col-md-12">
+
+
+          <form class="contact_form" action="">
+
+            <div ng-repeat="value in dossierCourant.contentContact" class="contact_form_input col-md-12">
+              <label for="">{{value.label}}</label>
+              <input type="{{value.type}}" name="{{value.nameInput}}" value="" placeholder="{{value.placeholder}}">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+  </section>
   <script type="text/javascript" src="./index.js"></script>
 </body>
 

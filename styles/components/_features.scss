@@ -32,7 +32,7 @@
     background-color: #1D1D1D;
   }
   &_it{
-    
+
 
   }
   &_items{
@@ -49,6 +49,10 @@
 
   }
 
+}
+.active{
+
+  background-color: green;
 }
 ul{
   float: right;
