@@ -14,7 +14,7 @@
   <section class="features">
     <header>
       <ul class="features_content">
-        <li ng-repeat="dossier in dossiers" ng-class="{active:dossier ==dossierCourant}" class="features_items"><a   ng-click="selectionDossier(dossier)" href="#{{dossier.value}}" class="features_items_link" >{{dossier.label}}</a></li>
+        <li id="li" ng-repeat="dossier in dossiers" ng-class="{active:dossier ==dossierCourant}" class="features_items" ng-click="scrollTo('section')"><a   ng-click="selectionDossier(dossier)" href="#{{dossier.value}}" class="features_items_link" >{{dossier.label}}</a></li>
       </ul>
     </header>
 
@@ -35,7 +35,7 @@
 
     </div>
   </section>
-  <section class="about">
+  <section id="section" class="about">
     <div class="container">
       <div class="row">
         <div class="col-md-12 col-xs-12">
