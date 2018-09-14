@@ -1,7 +1,7 @@
 import Angularjs from "angularjs";
 var app = angular.module("Webmail", []);
 // le service location nous permet d'inclure l'etat de l'application dans l'url.
-app.controller("WebmailCtrl", function($scope) {
+app.controller("WebmailCtrl", function($scope, $location) {
   $scope.dossiers = [{
 
       value: "About",
@@ -127,5 +127,30 @@ app.controller("WebmailCtrl", function($scope) {
   $scope.selectionDossier = function(dossier) {
     $scope.dossierCourant = dossier;
   }
+  // onsurveille les changement dans le path
+  $scope.$watch(function() {
+    return $location.path(); // $location nous permet la gestionde nos url: on appel sa des ancres;
+
+  }, function(newPath) {
+    var tapPath = newPath.split("/");
+    if (tapPath.length > 1) {
+
+      var valDossier = tapPath[1];
+      $scope.dossier.forEach(function(item) {
+        if (item.value == valDossier) {
+          $scope.selectionDossier(item);
+        }
+      });
+      if (tapPath > 2) {
+        var idMail = tapPath[2];
+        $scope.dossierCourant.forEach(function(item) {
+          if (item.id = idMail) {
+            $scope.selectionDossier(item);
+          }
+        })
+      }
+    }
+  });
+
 
 })

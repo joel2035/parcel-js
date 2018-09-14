@@ -13,8 +13,8 @@
 
   <section class="features">
     <header>
-      <ul class="features_it">
-        <li ng-repeat="dossier in dossiers" ng-class="{active:dossier ==dossierCourant}" class="features_items"><a   ng-click="selectionDossier(dossier)" href="#" class="features_items_link" >{{dossier.label}}</a></li>
+      <ul class="features_content">
+        <li ng-repeat="dossier in dossiers" ng-class="{active:dossier ==dossierCourant}" class="features_items"><a   ng-click="selectionDossier(dossier)" href="#{{dossier.value}}" class="features_items_link" >{{dossier.label}}</a></li>
       </ul>
     </header>
 
@@ -102,11 +102,12 @@
         <div class="col-md-12">
 
 
-          <form class="contact_form" action="">
+          <form class="contact_form" action="" name="myForm">
 
             <div ng-repeat="value in dossierCourant.contentContact" class="contact_form_input col-md-12">
               <label for="">{{value.label}}</label>
               <input type="{{value.type}}" name="{{value.nameInput}}" value="" placeholder="{{value.placeholder}}">
+              <span ng-show="myForm.value.nameInput.$error.value.type">Not a valid e-mail address</span>
             </div>
           </form>
         </div>
