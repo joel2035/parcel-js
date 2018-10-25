@@ -92,24 +92,26 @@
       </div>
     </div>
   </section>
-  <section class="contact">
-    <div class="container">
-      <div class="row">
+  <section class="Contact" ng-show="dossierCourant.contentContact != null">
+
+    <div class="row">
+      <div class="Contact_content">
         <div class="col-md-12">
           <h2 ng-repeat = "dossier in dossiers" ng-show ="dossierCourant.contentContact != null"
-           class="contact_title">{{dossier.title3}}</h2>
+           class="Contact_title">{{dossier.title3}}</h2>
         </div>
         <div class="col-md-12">
 
 
-          <form class="contact_form" action="" name="myForm">
+          <form class="Contact_form" action="" name="myForm">
 
-            <div ng-repeat="value in dossierCourant.contentContact" class="contact_form_input col-md-12">
+            <div ng-repeat="value in dossierCourant.contentContact" class="Contact_form_input col-md-12">
               <label for="">{{value.label}}</label>
-              <input type="{{value.type}}" name="{{value.nameInput}}" value="" placeholder="{{value.placeholder}}">
+              <input class="" type="{{value.type}}" name="{{value.nameInput}}" placeholder="{{value.placeholder}}">
               <span ng-show="myForm.value.nameInput.$error.value.type">Not a valid e-mail address</span>
             </div>
           </form>
+
         </div>
       </div>
     </div>

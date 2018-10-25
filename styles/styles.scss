@@ -7,6 +7,7 @@
 // Import Components
 @import './components/header';
 @import './components/features';
+@import './components/Contact';
 
 * {
   box-sizing: border-box;
@@ -20,6 +21,9 @@ html {
 body {
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
   background-color: hwb(90, 0%, 0%, 0.5);
+  margin: 0;
+  padding: 0;
+  background-size: cover;
 }
 
 .row {
@@ -30,5 +34,5 @@ body {
   position: relative;
   z-index: 2;
   overflow: hidden;
-  
+
 }
